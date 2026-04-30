@@ -29,6 +29,21 @@ _comp_h_y = [
      682,
      768,
 ]
+_comp_v_x = [
+     743,
+     830,
+     916,
+    1003,
+    1089,
+    1176,
+]
+_comp_v_y = [
+     378,
+     465,
+     552,
+     638,
+     725,
+]
 
 OBJ_LOCS = [[(0, 0)] * 6 for _ in range(0, 6)]
 for row in range(0, 6):
@@ -42,3 +57,6 @@ COMP_LOCS = [
 for row in range(0, 6):
     for col in range(0, 5):
         COMP_LOCS[0][row][col] = (_comp_h_y[row], _comp_h_x[col])
+for row in range(0, 5):
+    for col in range(0, 6):
+        COMP_LOCS[1][row][col] = (_comp_v_y[row], _comp_v_x[col])
