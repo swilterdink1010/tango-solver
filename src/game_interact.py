@@ -12,7 +12,7 @@ def solve_screen():
     board_state = capture_board()
     print("\nStarting State:")
     board_state.print()
-    solver = Solver()
+    solver = Solver(board_state)
     solver.backtrack()
     print("\nTarget State:")
     solver.print()
@@ -20,7 +20,7 @@ def solve_screen():
         for col in range(0, 6):
             if board_state.grid[row][col] != 0:
                 continue
-            for _ in range(0, 3 - solver.grid[row][col]):
+            for _ in range(0, solver.grid[row][col]):   
                 auto.leftClick(OBJ_LOCS[row][col][1], OBJ_LOCS[row][col][0])
 
 
