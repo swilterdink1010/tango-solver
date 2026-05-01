@@ -1,4 +1,4 @@
-from solver import Board
+from board import Board
 
 apr_29 = Board(
         suns=[
